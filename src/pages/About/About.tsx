@@ -1,4 +1,4 @@
-import { Container, Divider, Grid, Paper, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import Fade from "@mui/material/Fade";
 import "./About.css";
