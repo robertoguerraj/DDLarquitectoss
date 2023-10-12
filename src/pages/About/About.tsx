@@ -1,33 +1,28 @@
-import { Container, Grid, Typography } from "@mui/material";
+import { Container, Divider, Grid, Paper, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import Fade from "@mui/material/Fade";
-
+import "./About.css";
 const StyledContainer = styled(Container)({
-  marginTop: "30px",
+  marginTop: "0px",
   padding: "20px",
 });
 
 const About = () => {
   const valores = [
     {
-      titulo: "Creatividad",
-      descripcion:
-        "Diseñamos espacios innovadores que inspiran y mejoran la calidad de vida.",
+      title: "Fidelidad",
+      description:
+        "Comprometidos en la superación de las expectativas y firmeza en la conclusión de trabajos completos de calidad.",
     },
     {
-      titulo: "Integridad",
-      descripcion:
-        "Nos comprometemos a mantener altos estándares éticos y profesionales en cada proyecto.",
+      title: "Empatía",
+      description:
+        "Salir del sistema para observar ampliamente las necesidades del cliente desde una perspectiva externa y compasiva.",
     },
     {
-      titulo: "Sostenibilidad",
-      descripcion:
-        "Priorizamos prácticas ecoamigables para minimizar nuestro impacto en el medio ambiente.",
-    },
-    {
-      titulo: "Colaboración",
-      descripcion:
-        "Trabajamos de la mano con nuestros clientes para convertir sus sueños en realidad.",
+      title: "Sostenibilidad",
+      description:
+        "Declaración de ofrecimiento total a la labor de la arquitectura con soluciones de convencimiento directas y honestas.",
     },
   ];
 
@@ -36,6 +31,19 @@ const About = () => {
       <StyledContainer maxWidth="lg">
         <Grid container spacing={4} alignItems="center">
           {/* Lado izquierdo: Imagen */}
+
+          {/* Lado derecho: Descripción */}
+          <Grid item xs={12} md={6}>
+            <Typography variant="h5" gutterBottom align="center">
+              “Conectando con el lado humano de la arquitectura”
+            </Typography>
+            <br />
+            <Typography variant="body1" paragraph align="justify">
+              {`El taller de diseño y construcción lo conformamos profesionales comprometidos con la creación de un vínculo genuino entre el ser humano y el espacio que habita. 
+              Realizamos nuestro trabajo a través de un proceso de descubrimiento personalizado que consiste en obtener información de nuestros clientes mediante la construcción de una relación de confianza para conocer sus más profundas necesidades y brindarles soluciones únicas que protejan su inversión. 
+              Adoptamos el rol de guías para dirigir el rumbo de nuestros proyectos en conjunto con el usuario hacia el mejor resultado posible, estableciendo cada actividad creativa como un reto personal.`}
+            </Typography>
+          </Grid>
           <Grid item xs={12} md={6}>
             <img
               src="../src/assets/AboutPage/AboutPageImage.jpg"
@@ -47,44 +55,30 @@ const About = () => {
               }}
             />
           </Grid>
-
-          {/* Lado derecho: Descripción */}
-          <Grid item xs={12} md={6}>
-            <Typography variant="h4" gutterBottom align="justify">
-              “Conectando con el lado humano de la arquitectura”
-            </Typography>
-            <Typography variant="body1" paragraph align="justify">
-              El taller de diseño y construcción está conformado por
-              profesionales comprometidos con la creación de un vínculo genuino
-              entre el ser humano y el espacio que habita. Nuestro trabajo se
-              realiza a través de un detallado proceso de descubrimiento que
-              consiste en obtener información de nuestro clientes para conocer
-              sus más profundas necesidades y brindar soluciones únicas y
-              creativas que protejan su inversión.
-              <br />
-              Cada creación la tomamos como un reto personal y adoptamos el rol
-              de guías para dirigir el rumbo de nuestros proyectos hacia el
-              mejor resultado posible mediante la generación de una relación de
-              confianza y constante comunicación.
-            </Typography>
-          </Grid>
         </Grid>
         {/* Salto de línea */}
-        <div style={{ marginTop: "30px" }} />
+        <div style={{ marginTop: "150px" }} />
 
         {/* Sección de valores */}
-        <Grid item xs={12} md={6}>
-          <Typography variant="h5" gutterBottom align="justify">
-            Valores
-          </Typography>
-          <Typography variant="body1" paragraph align="justify">
-            {valores.map((valor, index) => (
-              <a key={index}>
-                <strong>{valor.titulo}:</strong> {valor.descripcion}
-                <br />
-              </a>
-            ))}
-          </Typography>
+        <Grid container spacing={0}>
+          {valores.map((item, index) => (
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              md={4}
+              lg={4}
+              key={index}
+              className={`column ${
+                index < valores.length - 1 ? "divider" : ""
+              }`}
+            >
+              <div className="centered-content">
+                <Typography variant="h6">{item.title}</Typography>
+                <Typography variant="body2">{item.description}</Typography>
+              </div>
+            </Grid>
+          ))}
         </Grid>
       </StyledContainer>
     </Fade>

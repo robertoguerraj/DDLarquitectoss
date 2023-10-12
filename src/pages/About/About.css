@@ -36,6 +36,24 @@
 .description {
     font-size: 2.5vw;
     line-height: 1.5;
-
-
 }
+
+.column {
+    padding: 16px; /* Adjust the padding as needed */
+    box-sizing: border-box; /* Include padding in the column width */
+    position: relative;
+  }
+  
+  .divider::after {
+    content: '';
+    border-right: 1px solid #4a4a4a57; /* Define the vertical divider style */
+    height: 100%; /* Make the divider the full height of the column */
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(50%); /* Center the divider */
+  }
+  
+  .centered-content {
+    text-align: center; /* Center the content within the column */
+  }
