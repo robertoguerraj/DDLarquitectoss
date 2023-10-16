@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'DDLarquitectoss'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_152F2E84DA9846EC995BF6FF9C6095AB }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4A21E05C1328431CB5E1652632F3DD98 }}
           package: .
