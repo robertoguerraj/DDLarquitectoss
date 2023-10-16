@@ -14,10 +14,10 @@ const About3 = () => {
             El taller de diseño y construcción está conformado por profesionales
             comprometidos con la creación de un vínculo genuino entre el ser
             humano y el espacio que habita. Nuestro trabajo se realiza a través
-            de un detallado proceso de descubrimcdsdsiento que consiste en
-            obtener información de nuestro clientes para conocer sus más
-            profundas necesidades y brindar soluciones únicas y creativas que
-            protejan su inversión.
+            de un detallado proceso de descubrimiento que consiste en obtener
+            información de nuestro clientes para conocer sus más profundas
+            necesidades y brindar soluciones únicas y creativas que protejan su
+            inversión.
             <br />
             Cada creación la tomamos como un reto personal y adoptamos el rol de
             guías para dirigir el rumbo de nuestros proyectos hacia el mejor
